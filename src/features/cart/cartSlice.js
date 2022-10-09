@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import cartItems from "../../cartItems";
 
 // если изменить url, то сработает thunkAPI.rejectWithValue("something went wrong");
 const url = "https://course-api.com/react-useReducer-cart-project";

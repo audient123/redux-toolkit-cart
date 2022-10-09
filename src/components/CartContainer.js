@@ -1,6 +1,7 @@
 import CartItem from "./CartItem";
 import { useDispatch, useSelector } from "react-redux";
-import {openModal} from '../features/modal/modalSlice';
+import { openModal } from '../features/modal/modalSlice';
+import { getCartItems } from "../features/cart/cartSlice";
 
 const CartContainer = () => {
     const dispatch = useDispatch();
@@ -14,6 +15,9 @@ const CartContainer = () => {
                 <h4 className="empty-cart">
                     is current empty
                 </h4>
+                <div className="empty-cart">
+                    <button type="button" className="btn confirm-btn" onClick={() => dispatch(getCartItems())}>Reload Data</button>
+                </div>
             </header>
 
         </section>
@@ -34,7 +38,7 @@ const CartContainer = () => {
                     <h4>total <span>${total.toFixed(2)}</span>
                     </h4>
                 </div>
-                <button className="btn clear-btn" onClick={()=>dispatch(openModal())}>clear cart</button>
+                <button className="btn clear-btn" onClick={() => dispatch(openModal())}>clear cart</button>
             </footer>
         </section>
     )

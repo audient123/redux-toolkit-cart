@@ -17,7 +17,11 @@ function App() {
 
   // вызывается только тогда, когда прогружается приложение
   useEffect(()=>{
-    dispatch(getCartItems());
+    const items = JSON.parse(localStorage.getItem('persist:root'));
+    if (!items) {
+      dispatch(getCartItems());
+      return;
+    }
   }, [])
 
   if (isLoading) {
