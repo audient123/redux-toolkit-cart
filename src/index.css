@@ -135,6 +135,15 @@ nav h3 {
   letter-spacing: 1px;
   color: var(--clr-white);
 }
+nav a {
+  font-size: 20px;
+  color: var(--clr-primary-dark);
+}
+nav a:hover {
+  font-size: 20px;
+  color: var(--clr-red-light);
+  text-decoration: underline;
+}
 .nav-container {
   display: block;
   position: relative;
@@ -306,4 +315,18 @@ hr {
 .btn-container {
   display: flex;
   justify-content: space-around;
+}
+/*
+=============== 
+Pages
+===============
+*/
+h4 span {
+  text-decoration: dotted;
+  color: var(--clr-red-light);
+}
+
+h4 span:hover {
+  text-decoration: underline;
+  color: var(--clr-primary);
 }

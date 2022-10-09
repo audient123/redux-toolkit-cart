@@ -1,9 +1,10 @@
 import { CartIcon } from '../icons';
 import { useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 
-const Navbar = () => {    
+const Navbar = () => {
     // деструктуризация 
-    const {amount} = useSelector((store) => store.cart)
+    const { amount } = useSelector((store) => store.cart)
 
     return (
         <nav>
@@ -16,7 +17,14 @@ const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <div className='nav-center'>
+                <Link to="about">About</Link>
+            </div>
+            <div className='nav-center'>
+                <Link to="anotherPage">Another Page</Link>
+            </div>
         </nav>
+
     );
 }
 

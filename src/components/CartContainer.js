@@ -19,7 +19,6 @@ const CartContainer = () => {
                     <button type="button" className="btn confirm-btn" onClick={() => dispatch(getCartItems())}>Reload Data</button>
                 </div>
             </header>
-
         </section>
     }
     return (
