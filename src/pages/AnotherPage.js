@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const FirstPage = () => {
+const AnotherPage = () => {
     return (
         <div className="cart">
             <h2>Another Amazing Page</h2>
@@ -11,4 +11,4 @@ const FirstPage = () => {
     )
 }
 
-export default FirstPage;
+export default AnotherPage;
